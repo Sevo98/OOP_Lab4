@@ -139,7 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Album.cpp" />
+    <ClCompile Include="Band.cpp" />
+    <ClCompile Include="CheckInput.cpp" />
     <ClCompile Include="OOP_Lab4.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Ring.cpp" />
+    <ClCompile Include="Song.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Album.h" />
+    <ClInclude Include="Band.h" />
+    <ClInclude Include="CheckInput.h" />
+    <ClInclude Include="Genre.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Ring.h" />
+    <ClInclude Include="Song.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
