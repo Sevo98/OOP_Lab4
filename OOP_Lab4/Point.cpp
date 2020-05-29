@@ -3,13 +3,15 @@
 #include "CheckInput.h"
 using namespace std;
 
-void Point::ReadPointFromConsole()
+void Point::ReadPointFromConsole(double X, double Y)
 {
-	cout << "Введите Х: ";
+	this->X = X;
+	this->Y = Y;
+	/*cout << "Введите Х: ";
 	CheckInput::CheckInputDouble(&this->X);
 
 	cout << "\nВведите Y: ";
-	CheckInput::CheckInputDouble(&this->Y);
+	CheckInput::CheckInputDouble(&this->Y);*/
 }
 
 void Point::WritePointFromConsole()
@@ -24,6 +26,5 @@ Point::Point()
 
 Point::Point(double X, double Y)
 {
-	this->X = X;
-	this->Y = Y;
+	ReadPointFromConsole(X, Y);
 }

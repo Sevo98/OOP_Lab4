@@ -3,8 +3,9 @@ class Point
 {
 	double X;
 	double Y;
+	void ReadPointFromConsole(double X, double Y);
 public:
-	void ReadPointFromConsole();
+	
 	void WritePointFromConsole();
 	
 	Point();

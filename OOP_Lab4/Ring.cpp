@@ -3,7 +3,9 @@
 #include "CheckInput.h"
 using namespace std;
 
-void Ring::ReadRingFromConsole(Point center, double outerRadius, double innerRadius)
+int Ring::AllRingsCount = 0;
+
+void Ring::AssertOnPositiveValue(double outerRadius, double innerRadius)
 {
 	if (true)
 	{
@@ -33,6 +35,11 @@ void Ring::ReadRingFromConsole(Point center, double outerRadius, double innerRad
 			cout << "Внутренний радиус не может быть больше внешнего!" << endl;
 		}
 	}
+}
+
+void Ring::ReadRingFromConsole(Point center, double outerRadius, double innerRadius)
+{
+	AssertOnPositiveValue(outerRadius, innerRadius);
 
 	this->_center = center;
 	this->_outerRadius = outerRadius;
@@ -46,6 +53,13 @@ void Ring::WriteRingFromConsole()
 	this->_center.WritePointFromConsole();
 }
 
+int Ring::GetAllRingsCount()
+{
+	return AllRingsCount;
+}
+
+
+
 double Ring::GetArea()
 {
 	double Area;
@@ -56,15 +70,33 @@ double Ring::GetArea()
 
 Ring::Ring()
 {
+	Ring::AllRingsCount++;
 }
 
 Ring::Ring(Point center, double outerRadius, double innerRadius)
 {
+	Ring::AllRingsCount++;
 	ReadRingFromConsole(center, outerRadius, innerRadius);
+	
+}
+
+Ring::~Ring()
+{
+	Ring::AllRingsCount--;
+	cout << "Осталось: " << Ring::AllRingsCount << endl;
 }
 
 void DemoRing()
 {
+
+	cout << "Количество колец до вызова конструктора: " << Ring::GetAllRingsCount() << endl;
+
+	Ring* ring = new Ring(Point(25.0, 25.0), 10.0, 5.0);
+	cout << "Количество колец после вызова конструктора: " << Ring::GetAllRingsCount() << endl;
+
+	delete ring;
+	cout << "Количество колец после вызова деструктора: " << Ring::GetAllRingsCount() << endl;
+
 	const int countRings = 3;
 	Ring rings[countRings];
 
@@ -78,8 +110,16 @@ void DemoRing()
 
 		Point point;
 		cout << "\nВведите центр  " << i + 1 << "-го кольца: " << endl;
-		point.ReadPointFromConsole();
+		double X, Y;
+		cout << "Введите X: ";
+		CheckInput::CheckInputDouble(&X);
+		cout << "\nВведите Y: ";
+		CheckInput::CheckInputDouble(&Y);
+
+		point = Point(X, Y);
+		
 		rings[i] = Ring(point, outerRadius, innerRadius);
+		cout << "Создан: " << Ring::GetAllRingsCount() << endl;
 		rings[i].WriteRingFromConsole();
 		double area;
 		area = rings[i].GetArea();
