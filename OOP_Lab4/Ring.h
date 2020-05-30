@@ -12,6 +12,10 @@ public:
 	void WriteRingFromConsole();
 	static int GetAllRingsCount();
 
+	double GetOuterRadius();
+	double GetPointX();
+	double GetPointY();
+
 	Ring();
 	Ring(Point center, double outerRadius, double innerRadius);
 	~Ring();

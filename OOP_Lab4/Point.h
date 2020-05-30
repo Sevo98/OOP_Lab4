@@ -6,6 +6,8 @@ class Point
 	void ReadPointFromConsole(double X, double Y);
 public:
 	
+	double GetX();
+	double GetY();
 	void WritePointFromConsole();
 	
 	Point();

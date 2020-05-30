@@ -142,8 +142,11 @@
     <ClCompile Include="Album.cpp" />
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="CheckInput.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="DoubleValidator.cpp" />
     <ClCompile Include="OOP_Lab4.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="RectangleClass.cpp" />
     <ClCompile Include="Ring.cpp" />
     <ClCompile Include="Song.cpp" />
   </ItemGroup>
@@ -151,8 +154,11 @@
     <ClInclude Include="Album.h" />
     <ClInclude Include="Band.h" />
     <ClInclude Include="CheckInput.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="DoubleValidator.h" />
     <ClInclude Include="Genre.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="RectangleClass.h" />
     <ClInclude Include="Ring.h" />
     <ClInclude Include="Song.h" />
   </ItemGroup>

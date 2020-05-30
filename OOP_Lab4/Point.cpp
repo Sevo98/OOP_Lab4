@@ -14,6 +14,16 @@ void Point::ReadPointFromConsole(double X, double Y)
 	CheckInput::CheckInputDouble(&this->Y);*/
 }
 
+double Point::GetX()
+{
+	return X;
+}
+
+double Point::GetY()
+{
+	return Y;
+}
+
 void Point::WritePointFromConsole()
 {
 	cout << "X: " << this->X << endl;

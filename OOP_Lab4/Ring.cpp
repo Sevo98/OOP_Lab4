@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Ring.h"
 #include "CheckInput.h"
+#include "DoubleValidator.h"
 using namespace std;
 
 int Ring::AllRingsCount = 0;
@@ -9,7 +10,9 @@ void Ring::AssertOnPositiveValue(double outerRadius, double innerRadius)
 {
 	if (true)
 	{
-		try
+		DoubleValidator::AssertPositiveValue(outerRadius);
+		DoubleValidator::AssertPositiveValue(innerRadius);
+		/*try
 		{
 			if (outerRadius <= 0 || innerRadius <= 0)
 			{
@@ -20,7 +23,7 @@ void Ring::AssertOnPositiveValue(double outerRadius, double innerRadius)
 		catch (const std::exception&)
 		{
 			cout << "Радиус должен быть вещественным положительным числом!" << endl;
-		}
+		}*/
 
 		try
 		{
@@ -56,6 +59,21 @@ void Ring::WriteRingFromConsole()
 int Ring::GetAllRingsCount()
 {
 	return AllRingsCount;
+}
+
+double Ring::GetOuterRadius()
+{
+	return this->_outerRadius;
+}
+
+double Ring::GetPointX()
+{
+	return this->_center.GetX();
+}
+
+double Ring::GetPointY()
+{
+	return this->_center.GetY();
 }
 
 
