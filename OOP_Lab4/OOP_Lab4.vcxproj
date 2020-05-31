@@ -144,6 +144,7 @@
     <ClCompile Include="CheckInput.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="DoubleValidator.cpp" />
+    <ClCompile Include="GeometricProgram.cpp" />
     <ClCompile Include="OOP_Lab4.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RectangleClass.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="DoubleValidator.h" />
     <ClInclude Include="Genre.h" />
+    <ClInclude Include="GeometricProgram.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="RectangleClass.h" />
     <ClInclude Include="Ring.h" />
