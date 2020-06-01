@@ -11,7 +11,7 @@ bool CollisionManager::IsCollision(RectangleClass firstRectangle, RectangleClass
 	double dWidth = abs(firstRectangle.GetWidth() - secondRectangle.GetWidth()) / 2;
 	double dLenght = abs(firstRectangle.GetLength() - secondRectangle.GetLength()) / 2;
 
-	if (dX < dWidth || dY < dLenght)
+	if (dX < dWidth && dY < dLenght)
 	{
 		return true;
 	}

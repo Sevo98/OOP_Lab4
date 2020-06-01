@@ -31,6 +31,7 @@ void DoubleValidator::AssertPositiveValue(double value)
 	catch (const std::exception&)
 	{
 		cout << "Значение отрицательное!" << endl;
+		system("pause");
 	}
 }
 
@@ -46,5 +47,6 @@ void DoubleValidator::AssertValueInRange(double value, double min, double max)
 	catch (const std::exception&)
 	{
 		cout << "Значение не соответствует допустимому диапазону!" << endl;
+		system("pause");
 	}
 }

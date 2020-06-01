@@ -36,6 +36,7 @@ void Ring::AssertOnPositiveValue(double outerRadius, double innerRadius)
 		catch (const std::exception&)
 		{
 			cout << "Внутренний радиус не может быть больше внешнего!" << endl;
+			system("pause");
 		}
 	}
 }
