@@ -1,6 +1,6 @@
 #include <iostream>
 #include "CollisionManager.h"
-#include <math.h>
+#include <cmath>
 #include "RectangleClass.h"
 using namespace std;
 

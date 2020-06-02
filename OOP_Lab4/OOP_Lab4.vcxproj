@@ -147,8 +147,10 @@
     <ClCompile Include="GeometricProgram.cpp" />
     <ClCompile Include="OOP_Lab4.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Product.cpp" />
     <ClCompile Include="RectangleClass.cpp" />
     <ClCompile Include="Ring.cpp" />
+    <ClCompile Include="SaleManager.cpp" />
     <ClCompile Include="Song.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,8 +162,10 @@
     <ClInclude Include="Genre.h" />
     <ClInclude Include="GeometricProgram.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Product.h" />
     <ClInclude Include="RectangleClass.h" />
     <ClInclude Include="Ring.h" />
+    <ClInclude Include="SaleManager.h" />
     <ClInclude Include="Song.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
